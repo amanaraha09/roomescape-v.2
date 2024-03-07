@@ -75,6 +75,8 @@ const door14 = document.getElementById('door__14');
 const door15 = document.getElementById('door__15');
 const door16 = document.getElementById('door__16');
 const doorfail = document.getElementById('door__fail');
+const doorfail2 = document.getElementById('door__fail2');
+const doorfail3 = document.getElementById('door__fail3');
 
 
 
@@ -83,6 +85,7 @@ console.log(door1);
 
 const sound = document.querySelector(".buttonsound");
 const endsound = document.querySelector(".buttonsound_2");
+const move = document.querySelector(".move");
 
 door1.addEventListener("click",function() {
     sound.play();
@@ -152,7 +155,7 @@ door13.addEventListener("click",function() {
 door14.addEventListener("click",function() {
     endsound.play();
     door14.classList.add ('hidden');
-    doorfail.classList.remove ('hidden');
+    doorfail2.classList.remove ('hidden');
 })
 door15.addEventListener("click",function() {
     sound.play();
@@ -162,5 +165,34 @@ door15.addEventListener("click",function() {
 door16.addEventListener("click",function() {
     endsound.play();
     door16.classList.add ('hidden');
-    doorfail.classList.remove ('hidden');
+    doorfail3.classList.remove ('hidden');
 })
+
+doorfail.addEventListener("click",function() {
+    endsound.play();
+    doorfail.classList.add('move')
+    doorfail.classList.add('notHover')
+
+    setTimeout(function() {
+        doorfail.classList.remove('move');
+    }, 700);
+})
+doorfail2.addEventListener("click",function() {
+    endsound.play();
+    doorfail2.classList.add('move')
+    doorfail2.classList.add('notHover')
+
+    setTimeout(function() {
+        doorfail2.classList.remove('move');
+    }, 700);
+})
+doorfail3.addEventListener("click",function() {
+    endsound.play();
+    doorfail3.classList.add('move')
+    doorfail3.classList.add('notHover')
+
+    setTimeout(function() {
+        doorfail3.classList.remove('move');
+    }, 700);
+})
+
