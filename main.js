@@ -82,7 +82,7 @@ const hidden = document.querySelector("hidden");
 console.log(door1);
 
 const sound = document.querySelector(".buttonsound");
-const endsound = document.querySelector("buttonsound_2");
+const endsound = document.querySelector(".buttonsound_2");
 
 door1.addEventListener("click",function() {
     sound.play();
